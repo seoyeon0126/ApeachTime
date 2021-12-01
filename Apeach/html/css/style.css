@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+/* 기본사항 */
+
+* {
+	margin : 0 auto;
+	color : #333;
+	}
+	
+body {
+	/* background-color : pink; */
+	font-family : '나눔 고딕',
+	'Nanum Gothic' ,sans-serif;
+}
+
+ul {
+	padding : 0;
+}
+
+ul>li {
+	list-style : none;
+}
+
+a {
+	text-decoration : none;
+	color : inherit;
+}
+
+img {
+	vertical-align : top;
+}
+
+.hidden {
+	position : absolute;
+	left : -9999px;
+	font-size : 0;
+}
+
+/* 슬라이드 */
+
+.cover_cover {
+	position : relative;
+	width : 100%;
+	height : 500px;
+	overflow : hidden;
+}
+
+.cover>div {
+	width : 100%;
+	height : 500px;
+	position : absolute;
+	background-repeat : no-repeat;
+	background-position : center center;
+}
+
+.cover>div:nth-child(1) {
+	background-image : url(../images/슬라이드1.png);
+}
+
+.cover>div:nth-child(2) {
+	background-image : url(../images/슬라이드2.png);
+}
+
+.cover>div:nth-child(3) {
+	background-image : url(../images/슬라이드3.png);
+}
+
+.cover>div:nth-child(4) {
+	background-image : url(../images/슬라이드4.png);
+}
+
+.prev {
+	position : absolute;
+	top : 180px;
+	left : 50px;
+	cursor : pointer;
+}
+
+.next {
+	position : absolute;
+	top : 180px;
+	right : 50px;
+	cursor : pointer;
+}
+
+.cover_cover>.bullet {
+	width : 100%;
+	text-align : center;
+	position : absolute;
+	bottom : 10px;
+}
+
+.cover_cover>.bullet>li {
+	width : 10px;
+	height : 10px;
+	background-color : #fee6ef;
+	border-radius : 5px;
+	display : inline-block;
+	cursor : pointer;
+}
+
+.cover_cover>.bullet>li:hover {
+	background-color : #dc6566;
+}
+
+.hover {
+	background-color : #dc6566 !important;
+}
+
+/* 내용 */
+
+.content {
+	position : relative;
+	margin-top : 40px;
+	height : 1000px;
+	text-align : center;
+}
+
+.content>h3 {
+	font-size : 40px;
+	letter-spacing : 10px;
+}
+
+.content>p {
+	font-size : 20px;
+	letter-spacing : 5px;
+	margin-top : 15px;
+}
+
+.labindex {
+	width : 1210px;
+	margin : 90px auto;
+	position : relative;
+}
+
+.labindex>p {
+	width : 630px;
+	height : 650px;
+	overflow : hidden;
+}
+
+.labindex>p:nth-child(1) {
+	position : absolute;
+	top : 0;
+	left : 0;
+}
+
+.labindex>p:nth-child(2) {
+	position : absolute;
+	right : 0;
+	top : 50px; /* 겹쳐주기위해서 조금 어긋나게 포지션을 줌 */
+}
+
+.labindex>p>img {
+	transform : scale(1.0);
+	transition : transform 1s;
+}
+
+.labindex>p>img:hover {
+	transform : scale(1.05);
+	cursor : pointer;
+}
+
+.apeach {
+	width : 100%;
+	height : 300px;
+	background-color : #fbdbe6;
+	margin-top : 540px;
+	position : absolute;
+	z-index : -10;
+}
+
+.labindex>p>a {
+	position : absolute;
+	bottom : 80px;
+	left : 220px;
+	background-color : rgba(250,122,148,0.85);
+	width : 190px;
+	height : 40px;
+	text-align : center;
+	box-sizing : border-box;
+	padding-top : 9px;
+	color : #fff;
+}
+
+.labindex>p>a:hover {
+	opacity : 0.5;
+}
+
+/* 배경이미지 */
+
+.img {
+	position : relative;
+	width : 100%;
+	height : 500px;
+	background : url(../images/큰이미지.png)
+	no-repeat;
+	background-size : cover;
+	background-attachment : fixed;
+	background-attachment : fixed;
+}
+
+.img>p {
+	font-size : 100px;
+	color : #fff;
+	text-align : center;
+	line-height : 500px;
+}
+
+/* 롤링 */
+
+.gallery {
+	position : relative;
+}
+
+h2 {
+	margin : 50px auto;
+	text-align : center;
+	font-size : 40px;
+	letter-spacing : 10px;
+}
+
+.product {
+	position : relative;
+	width : 1260px;
+	/* 300*4=1200+20+20+20=1260 
+	20은 margin을 20씩주겠다는 가정하에 나온 값 */
+	height : 330px;
+}
+
+.product>p {
+	position : absolute;
+	top : 150px;
+	z-index : 50;
+}
+
+.product_pre {
+	left : -40px;
+}
+
+.product_next {
+	right : -40px;
+}
+
+.product>div {
+	position : relative;
+	width : 1260px;
+	height : 330px;
+	overflow : hidden;
+}
+
+.product>div>ul {
+	position : relative;
+	left : 0px;
+	width : 2880px;
+	/* border : 1px solid red; */
+}
+
+.product>div>ul>li {
+	float : left;
+	margin-right : 20px;
+	text-align : center;
+}
+
+.product>div>ul:after {
+	content : "";
+	display : block;
+	clear : both;
+}
+
+/* footer */
+
+footer {
+	position : relative;
+	width : 100%;
+	height : 300px;
+	background-color : #fbdbe6;
+	margin-top : 50px;
+}
